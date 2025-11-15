@@ -1,4 +1,3 @@
-pip install openpyxl
 import streamlit as st
 import pandas as pd
 import io
@@ -927,4 +926,5 @@ st.markdown(f"""
 </div>
 
 """, unsafe_allow_html=True)
+
 
