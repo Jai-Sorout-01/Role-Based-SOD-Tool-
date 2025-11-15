@@ -6,7 +6,7 @@ import base64
 
 # Page config
 st.set_page_config(
-    page_title="Victora - Role-Based SoD Conflict Analyzer", 
+    page_title="Victura - Role-Based SoD Conflict Analyzer", 
     page_icon="🔐", 
     layout="wide",
     initial_sidebar_state="expanded"
@@ -15,7 +15,7 @@ st.set_page_config(
 def load_logo():
     """Load and encode the company logo"""
     try:
-        with open("Victora logo.svg", "r", encoding="utf-8") as f:
+        with open("Victura logo.svg", "r", encoding="utf-8") as f:
             svg_content = f.read()
         b64_svg = base64.b64encode(svg_content.encode('utf-8')).decode('utf-8')
         return f"data:image/svg+xml;base64,{b64_svg}"
@@ -26,7 +26,7 @@ def get_logo_html(logo_data):
     """Generate HTML for logo display"""
     if logo_data:
         return f'<img src="{logo_data}" style="height: 80px;" alt="Victora Logo"/>'
-    return '<div style="height: 80px; width: 200px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">VICTORA</div>'
+    return '<div style="height: 80px; width: 200px; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">VICTURA</div>'
 
 # Enhanced Custom CSS
 st.markdown("""
@@ -920,8 +920,9 @@ st.markdown(f"""
     <div class="company-branding">
         {get_logo_html(logo_data)}
     </div>
-    <h4>Victora - Role-Based SoD Conflict Analyzer</h4>
+    <h4>Victura - Role-Based SoD Conflict Analyzer</h4>
     <p>Detect Conflicting T-codes Within SAP Roles</p>
     <small>Empowering organizations with intelligent conflict detection and risk management</small>
 </div>
+
 """, unsafe_allow_html=True)
